@@ -25,7 +25,7 @@ public class Main {
             if (isAllEvenNumbers(numberStr)) {
                 evenNumbers++;
                 /* иначе подсчитываем в оставшихся числах количество четных и нечетных цифр
-                * и, если они равны, увеличиваем другой счетчик*/
+                 * и, если они равны, увеличиваем другой счетчик*/
             } else if (getEvenNumbers(numberStr) == getNoEvenNumbers(numberStr)) {
                 evenAndNoEvenNumbers++;
             }
@@ -56,7 +56,7 @@ public class Main {
         // значит все цифры четные
         return true;
     }
-// Функция для подсчета четных чисел
+    // Функция для подсчета четных чисел
     public static int getEvenNumbers(String numberStr) {
         int result = 0;
         char numberChar;
