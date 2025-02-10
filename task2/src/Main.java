@@ -1,53 +1,54 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/*5.	Найти количество чисел, содержащих только четные цифры,
+ а среди них — количество чисел с равным числом четных и нечетных цифр. */
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+
         Scanner input = new Scanner(System.in);
 
         System.out.print("Введите число элементов n: ");
         int n = input.nextInt();
-        int[] a = new int[n];
+        int[] a = new int[n]; // создаем массив a с размером элементов n
 
         for (int i = 0; i < a.length; i++) {
             System.out.print((i + 1) + "-й элемент: ");
-            a[i] = input.nextInt();
+            a[i] = input.nextInt(); // заполнение массива
         }
 
-        int evenDigitsValuesCount = 0;
-        int countEvenAndUnEvenDigits = 0;
+        int evenNumbers = 0; // только четные числа
+        int evenAndNoEvenNumbers = 0; // только равное количество четных и нечетных чисел
         String numberStr;
+
         for (int i = 0; i < a.length; i++) {
             numberStr = String.valueOf(a[i]);  // Преобразуем число в строку
             /* Вызов функции для проверки четности всех цифр в числе*/
-            if (isAllEvenDigits(numberStr)) {
-                evenDigitsValuesCount++;
+            if (isAllEvenNumbers(numberStr)) {
+                evenNumbers++;
                 /* иначе подсчитываем в оставшихся числах количество четных и нечетных цифр
                 * и, если они равны, увеличиваем другой счетчик*/
-            } else if (getEvenDigitsCount(numberStr) == getUnevenDigitsCount(numberStr)) {
-                countEvenAndUnEvenDigits++;
+            } else if (getEvenNumbers(numberStr) == getNoEvenNumbers(numberStr)) {
+                evenAndNoEvenNumbers++;
             }
         }
-        System.out.println("Количество чисел, состоящих из только из четных цифр: " + evenDigitsValuesCount);
-        System.out.println("Количество чисел, с равным количеством четных и нечетных чисел: " + countEvenAndUnEvenDigits);
+        System.out.println("Количество чисел, состоящих только из четных цифр: " + evenNumbers);
+        System.out.println("Количество чисел, с равным количеством четных и нечетных цифр: " + evenAndNoEvenNumbers);
         System.out.println("\n***********************************\n");
         System.out.println("Разработчик: Владислав Бондарь");
-        System.out.println("Задание получено: ??.??.202?");
+        System.out.println("Задание получено: 04.02.2025");
         System.out.println("Задание выполнено: 07.02.2025");
     }
 
-    public static boolean isAllEvenDigits(String numberStr) {
-        char digitChar;
-        int digit;
+    public static boolean isAllEvenNumbers(String numberStr) {
+        char numberChar;
+        int number;
         // проходим по каждому символу из полученной строки
         for (int i = 0; i < numberStr.length(); i++) {
-            digitChar = numberStr.charAt(i);
+            numberChar = numberStr.charAt(i); //  CharAt - берем символ из строки
             // преобразуем этот символ в цифру
-            digit = Character.getNumericValue(digitChar);
+            number = Character.getNumericValue(numberChar); // Character - встроенный класс
+            // GetNumericValue - метод из класса Character для преобразования из char в int.
             // если цифра нечетная, возвращаем false
-            if (digit % 2 != 0) {
+            if (number % 2 != 0) {
                 return false;
             }
         }
@@ -55,31 +56,31 @@ public class Main {
         // значит все цифры четные
         return true;
     }
-
-    public static int getEvenDigitsCount(String numberStr) {
+// Функция для подсчета четных чисел
+    public static int getEvenNumbers(String numberStr) {
         int result = 0;
-        char digitChar;
-        int digit;
+        char numberChar;
+        int number;
         for (int i = 0; i < numberStr.length(); i++) {
-            digitChar = numberStr.charAt(i);
-            digit = Character.getNumericValue(digitChar);
+            numberChar = numberStr.charAt(i);
+            number = Character.getNumericValue(numberChar);
             // подсчет четных цифр
-            if (digit % 2 == 0) {
+            if (number % 2 == 0) {
                 result++;
             }
         }
         return result;
     }
-
-    public static int getUnevenDigitsCount(String numberStr) {
+    // Функция для подсчета нечетных чисел
+    public static int getNoEvenNumbers(String numberStr) {
         int result = 0;
-        char digitChar;
-        int digit;
+        char numberChar;
+        int number;
         for (int i = 0; i < numberStr.length(); i++) {
-            digitChar = numberStr.charAt(i);
-            digit = Character.getNumericValue(digitChar);
+            numberChar = numberStr.charAt(i);
+            number = Character.getNumericValue(numberChar);
             // подсчет нечетных
-            if (digit % 2 != 0) {
+            if (number % 2 != 0) {
                 result++;
             }
         }
