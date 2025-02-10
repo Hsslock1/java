@@ -1,5 +1,7 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/*5. Ввести целые числа как аргументы командной строки,
+подсчитать их сум- мы и произведения.
+Вывести результат на консоль.  */
+
 public class Main {
     public static void main(String[] args) {
         int summ = 0;
@@ -7,8 +9,8 @@ public class Main {
 
         for (String arg: args) {
             int value = Integer.parseInt(arg);
-            summ += value;
-            proizv *= value;
+            summ = summ + value;
+            proizv = proizv * value;
         }
 
         System.out.println("Сумма = " + summ);
