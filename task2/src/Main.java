@@ -21,7 +21,7 @@ public class Main {
 
         for (int i = 0; i < a.length; i++) {
             numberStr = String.valueOf(a[i]);  // Преобразуем число в строку
-            /* Вызов функции для проверки четности всех цифр в числе*/
+            // Вызов функции для проверки четности всех цифр в числе//
             if (isAllEvenNumbers(numberStr)) {
                 evenNumbers++;
                 /* иначе подсчитываем в оставшихся числах количество четных и нечетных цифр
@@ -63,7 +63,7 @@ public class Main {
         int number;
         for (int i = 0; i < numberStr.length(); i++) {
             numberChar = numberStr.charAt(i);
-            number = Character.getNumericValue(numberChar);
+            number = Character.getNumericValue(numberChar); // GetNumericValue - метод из класса Character для преобразования из char в int.
             // подсчет четных цифр
             if (number % 2 == 0) {
                 result++;
@@ -78,7 +78,7 @@ public class Main {
         int number;
         for (int i = 0; i < numberStr.length(); i++) {
             numberChar = numberStr.charAt(i);
-            number = Character.getNumericValue(numberChar);
+            number = Character.getNumericValue(numberChar); // GetNumericValue - метод из класса Character для преобразования из char в int.
             // подсчет нечетных
             if (number % 2 != 0) {
                 result++;
