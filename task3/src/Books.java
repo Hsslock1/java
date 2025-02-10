@@ -71,7 +71,7 @@ public class Books {
     private final ArrayList<Book> books; //для фильтрации внутри класса
 
     public Books(int count) {
-        ArrayList<Book> result = new ArrayList<Book>();
+        ArrayList<Book> result = new ArrayList<>();
         for (int i = 0; i < count; i++)
             result.add(new Book(GetRandomName(),
                     GetRandomAuthor(),
@@ -97,7 +97,7 @@ public class Books {
     }
 
     private ArrayList<String> GetRandomAuthor() {
-        ArrayList<String> authors = new ArrayList<String>();
+        ArrayList<String> authors = new ArrayList<>();
         int count_authors = GetRandom(1, 3);
         for (int i = 0; i < count_authors; i++) {
             authors.add(this.authors[GetRandom(0, this.authors.length - 1)]);
@@ -131,7 +131,7 @@ public class Books {
     }
 
     public ArrayList<Book> FilterByYear(int min_year, int max_year) {
-        ArrayList<Book> filtered_books = new ArrayList<Book>();
+        ArrayList<Book> filtered_books = new ArrayList<>();
         for (Book book : books) {
             if (book.getYear() < max_year && book.getYear() > min_year)
                 filtered_books.add(book);
@@ -140,7 +140,7 @@ public class Books {
     }
 
     public ArrayList<Book> FilterByPrice(int min_price, int max_price) {
-        ArrayList<Book> filtered_books = new ArrayList<Book>();
+        ArrayList<Book> filtered_books = new ArrayList<>();
         for (Book book : books) {
             if (book.getPrice() < max_price && book.getPrice() > min_price)
                 filtered_books.add(book);
@@ -149,7 +149,7 @@ public class Books {
     }
 
     public ArrayList<Book> SearchByAuthor(String author) {
-        ArrayList<Book> filtered_books = new ArrayList<Book>();
+        ArrayList<Book> filtered_books = new ArrayList<>();
         for (Book book : books) {
             if (book.getAuthors().contains(author))
                 filtered_books.add(book);

@@ -16,7 +16,7 @@ public class Book {
     public Book() {
         this.id = counter_object++;
         this.name = "Книга";
-        this.authors = new ArrayList<String>();
+        this.authors = new ArrayList<>();
         this.authors.add("Бондарь Владислав");
         this.publisher = "ВСГУТУ";
         this.year = 2025;
