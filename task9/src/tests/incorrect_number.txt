@@ -1,0 +1,5 @@
+3.14, en-US
+2.71, fr-FR
+invalid_number, en-GB
+-1.0, de-DE
+, en-GB

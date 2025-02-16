@@ -1,0 +1,2 @@
+3.14, invalid-locale
+2.71, fr-FR
