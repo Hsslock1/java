@@ -30,6 +30,7 @@ public class Main {
         }
 
         System.out.println("Считывание данных из файла " + inputFile + " для подсчета.");
+        System.out.println("Результат работы записан в файл: "+outputFile + ".");
         // создаем BufferedReader для чтения и BufferedWriter для записи в файлы
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
              BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
