@@ -1,4 +1,5 @@
 //5.	Найти в строке наибольшее число цифр, следующих подряд.
+// параметры для ввода task10\src\input.txt task10\src\output.txt
 import java.io.BufferedReader; // чтение текстовых потоков
 import java.io.BufferedWriter; // запись в текстовые потоки
 import java.io.FileReader; // чтение из файлов
