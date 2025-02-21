@@ -1,3 +1,4 @@
+//5.	Найти в строке наибольшее число цифр, следующих подряд.
 import java.io.BufferedReader; // чтение текстовых потоков
 import java.io.BufferedWriter; // запись в текстовые потоки
 import java.io.FileReader; // чтение из файлов
